@@ -1,0 +1,20 @@
+{
+  "run_list": [
+    "role[base]",
+    "role[ruby]",
+    "recipe[postgresql::server]",
+    "recipe[mongodb]"
+  ],
+  
+  "ruby_stack": {
+    "rubies": ["1.9.2-p290"],
+    "global": "1.9.2-p290",
+    "users": "vagrant"
+  },
+
+  "postgresql": {
+    "password": {
+      "postgres": "password"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "maintenance",
+  "description": "Tools to ease maintenance",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+
+  "run_list": [
+    "recipe[apt_show_versions]"
+  ]
+}

@@ -1,0 +1,35 @@
+site "http://community.opscode.com/api/v1"
+
+##
+# Base
+#
+
+cookbook "apt"
+cookbook 'build-essential'
+cookbook 'git'
+
+
+##
+# Ruby
+#
+
+cookbook 'ruby_build',
+  :git => 'https://github.com/fnichol/chef-ruby_build.git',
+  :ref => 'v0.6.2'
+
+cookbook 'rbenv',
+  :git => 'https://github.com/fnichol/chef-rbenv',
+  :ref => 'v0.6.8'
+
+cookbook 'ruby_stack',
+  :git => 'https://github.com/rchampourlier/chef_ruby_stack',
+  :ref => 'master'
+
+
+##
+# Databases
+#
+
+cookbook 'openssl'
+cookbook 'postgresql'
+cookbook 'mongodb'

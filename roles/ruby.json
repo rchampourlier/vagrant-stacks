@@ -1,0 +1,10 @@
+{
+  "name": "ruby",
+  "description": "Install Ruby stack with rbenv. Gems are managed by Bundler.",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  
+  "run_list": [
+    "recipe[ruby_stack]"
+  ]
+}

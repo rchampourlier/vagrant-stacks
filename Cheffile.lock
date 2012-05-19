@@ -1,0 +1,48 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (1.4.2)
+    build-essential (1.0.0)
+    git (0.10.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+    mongodb (0.11.0)
+      apt (>= 0.0.0)
+    openssl (1.0.0)
+    postgresql (0.99.4)
+      openssl (>= 0.0.0)
+    runit (0.15.0)
+    yum (0.5.2)
+
+GIT
+  remote: https://github.com/fnichol/chef-rbenv
+  ref: v0.6.8
+  sha: b283a008d148ffa56605c278be466da710054730
+  specs:
+    rbenv (0.6.8)
+
+GIT
+  remote: https://github.com/fnichol/chef-ruby_build.git
+  ref: v0.6.2
+  sha: 2e45dc11b4f98175cc1f70ad254e22aab213cfb4
+  specs:
+    ruby_build (0.6.2)
+
+GIT
+  remote: https://github.com/rchampourlier/chef_ruby_stack
+  ref: master
+  sha: 7b6ced4ea15d21f77b9a788f5bb34a0c4182e701
+  specs:
+    ruby_stack (0.0.1)
+
+DEPENDENCIES
+  apt (>= 0)
+  build-essential (>= 0)
+  git (>= 0)
+  mongodb (>= 0)
+  openssl (>= 0)
+  postgresql (>= 0)
+  rbenv (>= 0)
+  ruby_build (>= 0)
+  ruby_stack (>= 0)
+
