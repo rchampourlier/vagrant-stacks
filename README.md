@@ -1,31 +1,52 @@
-# Setup your development machine
+This repository contains the essential components required to start building you own provisioned [Vagrant](http://www.vagrantup.com) boxes.
 
 ## Getting started
 
-```
-cd machines
-vagrant up
-```
+Here is a simple walkthrough on how to use this repository to provision a Vagrant box with the `ruby-1.9.2-p290-pg-mongodb` configuration. You can select a configuration amongst the ones describe below in "Available configurations".
 
-## Presentation
+### Prepare the repository
 
-### Vagrant
-
-The development machine setup is provided by Vagrant. The `Vagrantfile` specifies the Vagrant box to be used and how to link it to your machine's environment (SSH tunnelling, port forwarding, directory sync, etc.).
-
-The machine is currently based on the `lucid` Vagrant base box (Ubuntu 10.04.3 LTS, which is the same as on the production server).
-
-### Provisioning with Chef
-
-The development environment (Ruby stack with rbenv, databases, and other required services) is setup through a Chef recipe (`development.json`, using `cookbooks` and `roles`).
-
-### Bundling the required cookbooks with Librarian
-
-The cookbooks for this recipe are defined in the `Cheffile`. You will need to gather them using Librarian:
+We first need to prepare this repository with the required tools and cookbooks for [Chef-Solo](http://wiki.opscode.com/display/chef/Chef+Solo). Chef-Solo is used to provision the box automatically.
 
 ```
-cd machines
-gem install librarian
-librarian-chef install
+$ gem install librarian
+$ librarian-chef install
 ```
-Once installed, the cookbooks are kept in `cookbooks`. They will be committed to the git repo, so installing them is only needed when adding a new cookbook.
+
+The first line installs [Librarian](https://github.com/applicationsonline/librarian), a small tool helping us with managing the Chef's cookbooks. The second let it fetch the required cookbooks (which are defined within `Cheffile`, and get installed under `cookbooks`).
+
+### Select the appropriate `Vagrantfile`
+
+A `Vagrantfile` is required to configure how Vagrant will run. There are predefined files available under `vagrantfiles` depending on which configuration you want to provision. Since we assume in this walkthrough you want to provision a `ruby-1.9.2-p290-pg-mongodb` box, let's run this:
+
+```
+$ cp vagrantfiles/ruby-1.9.2-p290-pg-mongodb_Vagrantfile ./Vagrantfile
+```
+
+This copies the appropriate Vagrantfile in the current directory, so that Vagrant can use it.
+
+### Launch the process
+
+The last step is to have Vagrant *up* the box. Thanks to the `Vagrantfile` we selected, it will select and download the appropriate base box, and run the provisioning necessary operations. We'll end up with a running Vagrant box provisoned according to the selected configuration.
+
+```
+$ vagrant up
+```
+
+### Package the box
+
+You will surely want to package this box so you can reuse the provisoned environment in your own projects. I invite you to follow [Vagrant's documentation](http://vagrantup.com/docs/getting-started/packaging.html) for this part!
+
+## Available configurations
+
+* **ruby-1.9.2-p290-pg-mongodb**
+
+  A `lucid32` Vagrant base box with some additional components:
+  * base: build-essential and git (client)
+  * ruby: a **ruby 1.9.2-p290** stack managed with **rbenv**, **Bundler** installed globally and managing gems under project's `vendor/bundle` directory (defined in `vagrant`'s user `~/.bundle/config`)
+  * postgresql: a PostgreSQL 8.4 package install from default repo
+  * mongodb: a MongoDB package install from mongo's repo
+  
+## TODO
+
+* Script the whole thing so that once a configuration is chosen, installing Librarian and the cookbooks, selecting the `Vagrantfile` , upping the machine and packaging is done through a single command.
