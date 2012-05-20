@@ -1,4 +1,10 @@
-This repository contains the essential components required to start building you own provisioned [Vagrant](http://www.vagrantup.com) boxes.
+This repository contains the essential components required to start building and packaging you own provisioned [Vagrant](http://www.vagrantup.com) boxes.
+
+This repo will help you to shorten the path to provision you Vagrant box (i.e. install the components you need, such as a Ruby stack, some databases).
+
+Using one of the *Available configurations*, you can **build a provisioned Vagrant box** with some commands, **without even having to write a Chef recipe for the provisioning**!
+
+Once your box is up, package it so that you can reuse it in others project without having to provision the box each time you need it (Ruby compilation can take some time).
 
 ## Getting started
 
@@ -35,7 +41,27 @@ $ vagrant up
 
 ### Package the box
 
-You will surely want to package this box so you can reuse the provisoned environment in your own projects. I invite you to follow [Vagrant's documentation](http://vagrantup.com/docs/getting-started/packaging.html) for this part!
+You will surely want to package this box so you can reuse the provisoned environment in your own projects.
+
+If you have prepared the box with `vagrant up`, you should now be able to export it simply and quickly with this command:
+
+```
+vagrant package
+```
+
+If everything goes well, this should create a `package.box` with your newly provisioned Vagrant box! Congratulations!
+
+Now you can share it with your team, place it on any file server, and reuse it in new projects by simpling using this in your project's `Vagrantfile`:
+
+```
+# The box and its URL
+config.vm.box = "ruby-1.9.2-p290-pg-mongodb"
+config.vm.box_url = "http://your-file-server.com/ruby-1.9.2-p290-pg-mongodb.box"
+```
+
+Enjoy!
+
+*Packaging is described in this [Vagrant's documentation](http://vagrantup.com/docs/getting-started/packaging.html).*
 
 ## Available configurations
 
