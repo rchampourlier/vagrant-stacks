@@ -43,6 +43,9 @@ $ vagrant up
 
 You will surely want to package this box so you can reuse the provisoned environment in your own projects.
 
+*Packaging is described in this [Vagrant's documentation](http://vagrantup.com/docs/getting-started/packaging.html).
+*
+
 If you have prepared the box with `vagrant up`, you should now be able to export it simply and quickly with this command:
 
 ```
@@ -59,9 +62,13 @@ config.vm.box = "ruby-1.9.2-p290-pg-mongodb"
 config.vm.box_url = "http://your-file-server.com/ruby-1.9.2-p290-pg-mongodb.box"
 ```
 
-Enjoy!
+Should you just want to use your box from your local filesystem, comment the `config.vm.box_url...` line out, and run:
 
-*Packaging is described in this [Vagrant's documentation](http://vagrantup.com/docs/getting-started/packaging.html).*
+```
+vagrant box add ruby-1.9.2-p290-pg-mongodb path/to/your/ruby-1.9.2-p290-pg-mongodb.box
+```
+
+**Enjoy!**
 
 ## Available configurations
 
