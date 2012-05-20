@@ -77,7 +77,7 @@ vagrant box add ruby-1.9.2-p290-pg-mongodb path/to/your/ruby-1.9.2-p290-pg-mongo
   A `lucid32` Vagrant base box with some additional components:
   * base: build-essential and git (client)
   * ruby: a **ruby 1.9.2-p290** stack managed with **rbenv**, **Bundler** installed globally and managing gems under project's `vendor/bundle` directory (defined in `vagrant`'s user `~/.bundle/config`)
-  * postgresql: a PostgreSQL 8.4 package install from default repo
+  * postgresql: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`)
   * mongodb: a MongoDB package install from mongo's repo
   
 ## Fork!
