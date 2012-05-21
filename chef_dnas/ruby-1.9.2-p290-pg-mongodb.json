@@ -2,7 +2,7 @@
   "run_list": [
     "role[base]",
     "role[ruby]",
-    "recipe[postgresql::server]",
+    "recipe[postgresql_server_utf8]",
     "recipe[mongodb]"
   ],
   
