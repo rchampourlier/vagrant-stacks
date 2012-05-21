@@ -33,3 +33,5 @@ cookbook 'ruby_stack',
 cookbook 'openssl'
 cookbook 'postgresql'
 cookbook 'mongodb'
+
+cookbook 'database'
