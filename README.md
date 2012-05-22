@@ -77,10 +77,10 @@ vagrant box add ruby-1.9.2-p290-pg-mongodb path/to/your/ruby-1.9.2-p290-pg-mongo
     * `lucid32` (Ubuntu 10.04.3 LTS) base box from [vagrantbox.es](http://vagrantbox.es)
     * Default locale (`en_US`) changed to (`en_US.UTF8`). See used `postgresql_server_utf8` cookbook for more details.
   * Provisioned software:
-	  * base: build-essential and git (client)
-	  * ruby: a **ruby 1.9.2-p290** stack managed with **rbenv**, **Bundler** installed globally and managing gems under project's `vendor/bundle` directory (defined in `vagrant`'s user `~/.bundle/config`)
-	  * postgresql: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`). Compatible with UTF8 thanks.
-	  * mongodb: a MongoDB package install from mongo's repo
+	  * **base**: build-essential and git (client)
+	  * **ruby**: a *ruby 1.9.2-p290* stack managed with *rbenv*, *Bundler* installed globally (default gems management - within rbenv's directory)
+	  * **postgresql**: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`). Compatible with UTF8 thanks.
+	  * **mongodb**: a MongoDB package install from mongo's repo
   
 ## Fork!
 

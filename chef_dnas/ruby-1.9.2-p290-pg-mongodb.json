@@ -7,7 +7,7 @@
   ],
   
   "ruby_stack": {
-    "rubies": ["1.9.2-p290"],
+    "rubies": "1.9.2-p290",
     "global": "1.9.2-p290",
     "users": "vagrant"
   },

@@ -40,7 +40,7 @@ GIT
 GIT
   remote: https://github.com/rchampourlier/chef_ruby_stack
   ref: master
-  sha: 8fef5639d3040f4b608a0386d603fbdade8bc27a
+  sha: 37fa840c102191357de37ddc33892f0acb07d504
   specs:
     ruby_stack (0.0.1)
 
