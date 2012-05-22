@@ -81,6 +81,7 @@ vagrant box add ruby-1.9.2-p290-pg-mongodb path/to/your/ruby-1.9.2-p290-pg-mongo
 	  * **ruby**: a *ruby 1.9.2-p290* stack managed with *rbenv*, *Bundler* installed globally (default gems management - within rbenv's directory)
 	  * **postgresql**: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`). Compatible with UTF8 thanks.
 	  * **mongodb**: a MongoDB package install from mongo's repo
+  * This box is available packaged [here](http://cdn.hubic.me/UqribXpHZqNp/ruby-1.9.2-p290-pg-mongodb.box).
   
 ## Fork!
 
