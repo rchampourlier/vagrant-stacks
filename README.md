@@ -57,8 +57,7 @@ $ vagrant up
 
 You will surely want to package this box so you can reuse the provisoned environment in your own projects.
 
-*Packaging is described in this [Vagrant's documentation](http://vagrantup.com/docs/getting-started/packaging.html).
-*
+*Packaging is described in this [Vagrant's documentation](http://vagrantup.com/docs/getting-started/packaging.html).*
 
 If you have prepared the box with `vagrant up`, you should now be able to export it simply and quickly with this command:
 
@@ -81,6 +80,14 @@ Should you just want to use your box from your local filesystem, comment the `co
 ```
 vagrant box add ruby-1.9.2-p290-pg-mongodb path/to/your/ruby-1.9.2-p290-pg-mongodb.box
 ```
+
+## What to do now?
+
+You surely want to use this vagrantbox you just built within a project. Having the right organization to manage your Vagrant configurations within your project will save you some time, so I advise you to check [this article](http://www.softr.li/blog/2012/05/19/organization-for-provisioning-your-environments-from-dev-to-prod-with-chef/) of mine.
+
+As a matter of fact, following this organization principle is quite easy if you're using vagrant-stacks! You just have to copy your local copy of the repo to your project's, inside a `machines` directory.
+
+The final step is to copy the `Vagrantfile` you used to provision the appropriate box into your project's root, and you should be able to run `vagrant up` directly from there!
 
 **Enjoy!**
 
