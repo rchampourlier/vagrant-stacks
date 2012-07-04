@@ -10,16 +10,30 @@ Once your box is up, package it so that you can reuse it in others project witho
 
 Here is a simple walkthrough on how to use this repository to provision a Vagrant box with the `ruby-1.9.2-p290-pg-mongodb` configuration. You can select a configuration amongst the ones describe below in "Available configurations".
 
-### Prepare the repository
+### Prerequisites
 
-We first need to prepare this repository with the required tools and cookbooks for [Chef-Solo](http://wiki.opscode.com/display/chef/Chef+Solo). Chef-Solo is used to provision the box automatically.
+- Ruby
+- Vagrant
+
+### Clone and prepare the repository
+
+First, we clone the repository.
+
+```
+git clone https://github.com/rchampourlier/vagrant-stacks.git
+cd vagrant-stacks
+```
+
+We then need to fetch the cookbooks we will use with [Chef-Solo](http://wiki.opscode.com/display/chef/Chef+Solo). (Chef-Solo is used to provision the box automatically.)
+
+To manage the cookbooks easily, we use [Librarian](https://github.com/applicationsonline/librarian).
 
 ```
 $ gem install librarian
 $ librarian-chef install
 ```
 
-The first line installs [Librarian](https://github.com/applicationsonline/librarian), a small tool helping us with managing the Chef's cookbooks. The second let it fetch the required cookbooks (which are defined within `Cheffile`, and get installed under `cookbooks`).
+The first line installs Librarian, while the second lets it fetch the required cookbooks (which are defined within `Cheffile`, and get installed under `cookbooks`).
 
 ### Select the appropriate `Vagrantfile`
 
