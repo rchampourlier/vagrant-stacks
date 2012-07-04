@@ -67,6 +67,8 @@ vagrant package
 
 If everything goes well, this should create a `package.box` with your newly provisioned Vagrant box! Congratulations!
 
+### Use the box in your projects
+
 Now you can share it with your team, place it on any file server, and reuse it in new projects by simpling using this in your project's `Vagrantfile`:
 
 ```
@@ -81,13 +83,9 @@ Should you just want to use your box from your local filesystem, comment the `co
 vagrant box add ruby-1.9.2-p290-pg-mongodb path/to/your/ruby-1.9.2-p290-pg-mongodb.box
 ```
 
-## What to do now?
+### Managing vagrant boxes
 
-You surely want to use this vagrantbox you just built within a project. Having the right organization to manage your Vagrant configurations within your project will save you some time, so I advise you to check [this article](http://www.softr.li/blog/2012/05/19/organization-for-provisioning-your-environments-from-dev-to-prod-with-chef/) of mine.
-
-As a matter of fact, following this organization principle is quite easy if you're using vagrant-stacks! You just have to copy your local copy of the repo to your project's, inside a `machines` directory.
-
-The final step is to copy the `Vagrantfile` you used to provision the appropriate box into your project's root, and you should be able to run `vagrant up` directly from there!
+To ensure you have everything in your project repository to rebuild and maintain the required vagrant boxes (you may have several: development, benchmarking, staging), a proper organization may help. [Here is an article ](http://www.softr.li/blog/2012/05/19/organization-for-provisioning-your-environments-from-dev-to-prod-with-chef/) I wrote on the subject, don't hesitate to leave your feedback or share your ideas!
 
 **Enjoy!**
 
