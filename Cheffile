@@ -30,8 +30,7 @@ cookbook 'ruby_stack',
 # Databases
 #
 
+cookbook 'database'
 cookbook 'openssl'
 cookbook 'postgresql'
 cookbook 'mongodb'
-
-cookbook 'database'
