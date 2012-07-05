@@ -100,7 +100,7 @@ To ensure you have everything in your project repository to rebuild and maintain
 	  * **ruby**: a *ruby 1.9.2-p290* stack managed with *rbenv*, *Bundler* installed globally (default gems management - within rbenv's directory)
 	  * **postgresql**: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`). Compatible with UTF8 thanks.
 	  * **mongodb**: a MongoDB package install from mongo's repo
-  * This box is available packaged [here](http://cdn.hubic.me/UqribXpHZqNp/ruby-1.9.2-p290-pg-mongodb.box).
+  * This box is available packaged [here](http://cdn.hubic.me/L9COgfNnGDQB/ruby-1.9.2-p290-pg-mongodb.box).
   
 ## Fork!
 
