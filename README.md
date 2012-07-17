@@ -101,7 +101,9 @@ To ensure you have everything in your project repository to rebuild and maintain
 	  * **postgresql**: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`). Compatible with UTF8 thanks.
 	  * **mongodb**: a MongoDB package install from mongo's repo
   * This box is available packaged [here](http://cdn.hubic.me/L9COgfNnGDQB/ruby-1.9.2-p290-pg-mongodb.box).
-  
+* **ruby-1.9.3-p194-pg-mongodb**
+  * Same as **ruby-1.9.2-p290-pg-mongodb** with Ruby 1.9.3-p194
+
 ## Fork!
 
 You're free to fork and submit pull requests if you want to add new configurations, or build some tools around this!

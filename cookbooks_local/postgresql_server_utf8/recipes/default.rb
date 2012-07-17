@@ -6,6 +6,7 @@
 #
 
 include_recipe "set_locale"
+include_recipe "apt"
 
 ENV['LANGUAGE'] = ENV['LANG'] = ENV['LC_ALL'] = "en_US.UTF-8"
 include_recipe "postgresql::server"
