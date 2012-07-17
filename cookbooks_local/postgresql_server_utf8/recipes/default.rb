@@ -6,7 +6,10 @@
 #
 
 include_recipe "set_locale"
-include_recipe "apt"
 
+# TODO
+# Test if already installed, if not run "recipe[apt_update_now]" so that
+# apt gets updated which may prevent some errors.
+#
 ENV['LANGUAGE'] = ENV['LANG'] = ENV['LC_ALL'] = "en_US.UTF-8"
 include_recipe "postgresql::server"

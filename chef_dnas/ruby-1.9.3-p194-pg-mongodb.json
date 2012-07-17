@@ -2,6 +2,7 @@
   "run_list": [
     "role[base]",
     "role[ruby]",
+    "recipe[apt_update_now]",
     "recipe[postgresql_server_utf8]",
     "recipe[mongodb]"
   ],

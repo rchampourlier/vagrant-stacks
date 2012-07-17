@@ -1,3 +1,7 @@
+# TODO
+#   - should test instead of running reconfiguration at each provisioning
+#     it's time consuming
+
 template "/etc/profile.d/lang.sh" do
   source  "lang.sh.erb"
   mode "0644"

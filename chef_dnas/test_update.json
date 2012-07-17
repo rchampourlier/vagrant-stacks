@@ -1,0 +1,6 @@
+{
+  "run_list": [
+    "recipe[apt_update_now]",
+    "recipe[postgresql_server_utf8]"
+  ]
+}

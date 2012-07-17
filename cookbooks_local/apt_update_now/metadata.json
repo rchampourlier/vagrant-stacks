@@ -1,0 +1,30 @@
+{
+  "name": "apt_update_now",
+  "description": "Execute 'apt-get update -y' immediately",
+  "long_description": "Execute 'apt-get update -y' immediately, without waiting the node's configuration is converged. This may be necessary in some cases where a package getting itself installed before node configuration convergence can't get installed without this update (such as a PostgreSQL package install returning error 100)",
+  "maintainer": "Romain Champourlier",
+  "maintainer_email": "romain@softr.li",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "default": "default"
+  },
+  "version": "0.0.1"
+}
