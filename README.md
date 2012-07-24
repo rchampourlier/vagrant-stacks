@@ -91,6 +91,8 @@ To ensure you have everything in your project repository to rebuild and maintain
 
 ## Available configurations
 
+* **barebones-lucid32**
+  This configuration can be used to build a customized lucid32 from the Vagrant's default one. It may be useful for example if you want to update VirtualBox Guest Additions and package your own updated lucid32 to build more complex setup without having to update the additions each time.
 * **ruby-1.9.2-p290-pg-mongodb**
   * Base box:
     * `lucid32` (Ubuntu 10.04.3 LTS) base box from [vagrantbox.es](http://vagrantbox.es)
