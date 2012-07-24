@@ -44,6 +44,27 @@ GIT
     ruby_build (0.6.2)
 
 GIT
+  remote: https://github.com/rchampourlier/chef_apt_show_versions.git
+  ref: master
+  sha: a5575594828b8b30ab98b1dedb87bc656c6166ce
+  specs:
+    apt_show_versions (0.0.1)
+
+GIT
+  remote: https://github.com/rchampourlier/chef_apt_update_now.git
+  ref: master
+  sha: a4aeba92d0f74db83d7765a2692fb1c3e382f8bc
+  specs:
+    apt_update_now (0.0.1)
+
+GIT
+  remote: https://github.com/rchampourlier/chef_postgresql_server_utf8
+  ref: master
+  sha: d677626d23c44f0fdde27e30dc248df4cb666a03
+  specs:
+    postgresql_server_utf8 (0.0.1)
+
+GIT
   remote: https://github.com/rchampourlier/chef_ruby_stack
   ref: master
   sha: 37fa840c102191357de37ddc33892f0acb07d504
@@ -52,12 +73,15 @@ GIT
 
 DEPENDENCIES
   apt (>= 0)
+  apt_show_versions (>= 0)
+  apt_update_now (>= 0)
   build-essential (>= 0)
   database (>= 0)
   git (>= 0)
   mongodb (>= 0)
   openssl (>= 0)
   postgresql (>= 0)
+  postgresql_server_utf8 (>= 0)
   rbenv (>= 0)
   ruby_build (>= 0)
   ruby_stack (>= 0)

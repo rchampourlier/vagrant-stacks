@@ -9,6 +9,14 @@ cookbook 'build-essential'
 cookbook 'git'
 
 
+cookbook 'apt_update_now',
+  :git => 'https://github.com/rchampourlier/chef_apt_update_now.git',
+  :ref => 'master'
+
+cookbook 'apt_show_versions',
+  :git => 'https://github.com/rchampourlier/chef_apt_show_versions.git',
+  :ref => 'master'
+
 ##
 # Ruby
 #
@@ -25,7 +33,6 @@ cookbook 'ruby_stack',
   :git => 'https://github.com/rchampourlier/chef_ruby_stack',
   :ref => 'master'
 
-
 ##
 # Databases
 #
@@ -33,4 +40,9 @@ cookbook 'ruby_stack',
 cookbook 'database'
 cookbook 'openssl'
 cookbook 'postgresql'
+
+cookbook 'postgresql_server_utf8',
+  :git => 'https://github.com/rchampourlier/chef_postgresql_server_utf8',
+  :ref => 'master'
+
 cookbook 'mongodb'
