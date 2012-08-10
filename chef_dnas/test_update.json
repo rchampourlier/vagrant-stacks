@@ -1,6 +1,6 @@
 {
   "run_list": [
-    "recipe[apt_update_now]",
+    "recipe[apt_additions::update_at_start]",
     "recipe[postgresql_server_utf8]"
   ]
 }

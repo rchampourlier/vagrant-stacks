@@ -1,0 +1,14 @@
+{
+  "run_list": [
+    "recipe[apt]",
+    "recipe[build-essential]",
+    "recipe[git]",
+    "recipe[ruby_stack]"
+  ],
+  
+  "ruby_stack": {
+    "rubies": "1.9.3-p194",
+    "global": "1.9.3-p194",
+    "users": "vagrant"
+  }
+}

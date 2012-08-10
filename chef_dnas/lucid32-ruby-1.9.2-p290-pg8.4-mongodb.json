@@ -1,7 +1,9 @@
 {
   "run_list": [
-    "role[base]",
-    "role[ruby]",
+    "recipe[apt]",
+    "recipe[build-essential]",
+    "recipe[git]",
+    "recipe[ruby_stack]",
     "recipe[postgresql_server_utf8]",
     "recipe[mongodb]"
   ],

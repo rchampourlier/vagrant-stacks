@@ -1,8 +1,10 @@
 {
   "run_list": [
-    "role[base]",
-    "role[ruby]",
-    "recipe[apt_update_now]",
+    "recipe[apt]",
+    "recipe[build-essential]",
+    "recipe[git]",
+    "recipe[ruby_stack]",
+    "recipe[postgresql::apt_postgresql_ppa]",
     "recipe[postgresql_server_utf8]",
     "recipe[mongodb]"
   ],
@@ -14,6 +16,7 @@
   },
 
   "postgresql": {
+    "version": "9.1",
     "password": {
       "postgres": "password"
     }

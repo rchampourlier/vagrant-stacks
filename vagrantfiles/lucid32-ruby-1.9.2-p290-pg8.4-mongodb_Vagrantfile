@@ -18,12 +18,12 @@ Vagrant::Config.run do |config|
   # Enables provisioning with chef solo.
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["./cookbooks", "./cookbooks_local"]
-    chef.roles_path = "./roles"
+    #chef.roles_path = "./roles"
     #chef.data_bags_path = "./data_bags"
 
-    dna = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'chef_dnas', 'ruby-1.9.3-p194-pg-mongodb.json')))
+    dna = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'chef_dnas', 'lucid32-ruby-1.9.2-p290-pg8.4-mongodb.json')))
     dna.delete("run_list").each do |run_item|
-      regexp = %r{(role|recipe)\[([\w:]+)\]}
+      regexp = %r{(role|recipe)\[([\w:-]+)\]}
       eval "chef.add_#{run_item[regexp, 1]} '#{run_item[regexp, 2]}'"
     end
 

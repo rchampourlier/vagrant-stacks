@@ -8,7 +8,7 @@ Once your box is up, package it so that you can reuse it in others project witho
 
 ## Getting started
 
-Here is a simple walkthrough on how to use this repository to provision a Vagrant box with the `ruby-1.9.2-p290-pg-mongodb` configuration. You can select a configuration amongst the ones describe below in "Available configurations".
+Here is a simple walkthrough on how to use this repository to provision a Vagrant box with the `lucid32-ruby-1.9.2-p290-pg8.4-mongodb` configuration. You can select a configuration amongst the ones describe below in "Available configurations".
 
 ### Prerequisites
 
@@ -42,10 +42,10 @@ The first line installs Librarian, while the second lets it fetch the required c
 
 ### Select the appropriate `Vagrantfile`
 
-A `Vagrantfile` is required to configure how Vagrant will run. There are predefined files available under `vagrantfiles` depending on which configuration you want to provision. Since we assume in this walkthrough you want to provision a `ruby-1.9.2-p290-pg-mongodb` box, let's run this:
+A `Vagrantfile` is required to configure how Vagrant will run. There are predefined files available under `vagrantfiles` depending on which configuration you want to provision. Since we assume in this walkthrough you want to provision a `lucid32-ruby-1.9.2-p290-pg8.4-mongodb` box, let's run this:
 
 ```
-$ cp vagrantfiles/ruby-1.9.2-p290-pg-mongodb_Vagrantfile ./Vagrantfile
+$ cp vagrantfiles/rlucid32-ruby-1.9.2-p290-pg8.4-mongodb_Vagrantfile ./Vagrantfile
 ```
 
 This copies the appropriate Vagrantfile in the current directory, so that Vagrant can use it.
@@ -96,20 +96,21 @@ To ensure you have everything in your project repository to rebuild and maintain
 
 ## Available configurations
 
-* **barebones-lucid32**
+* **lucid32**
   This configuration can be used to build a customized lucid32 from the Vagrant's default one. It may be useful for example if you want to update VirtualBox Guest Additions and package your own updated lucid32 to build more complex setup without having to update the additions each time.
-* **ruby-1.9.2-p290-pg-mongodb**
-  * Base box:
-    * `lucid32` (Ubuntu 10.04.3 LTS) base box from [vagrantbox.es](http://vagrantbox.es)
-    * Default locale (`en_US`) changed to (`en_US.UTF8`). See used `postgresql_server_utf8` cookbook for more details.
+* **lucid32-ruby-1.9.2-p290-pg8.4-mongodb**
+  * Base box: `lucid32` (Ubuntu 10.04.3 LTS) base box from [vagrantbox.es](http://vagrantbox.es)
+  * Default locale (`en_US`) changed to (`en_US.UTF8`). See used `postgresql_server_utf8` cookbook for more details.
   * Provisioned software:
 	  * **base**: build-essential and git (client)
 	  * **ruby**: a *ruby 1.9.2-p290* stack managed with *rbenv*, *Bundler* installed globally (default gems management - within rbenv's directory)
 	  * **postgresql**: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`). Compatible with UTF8 thanks.
 	  * **mongodb**: a MongoDB package install from mongo's repo
-  * This box is available packaged [here](http://cdn.hubic.me/L9COgfNnGDQB/ruby-1.9.2-p290-pg-mongodb.box).
-* **ruby-1.9.3-p194-pg-mongodb**
-  * Same as **ruby-1.9.2-p290-pg-mongodb** with Ruby 1.9.3-p194
+  * This box is available packaged [here]().
+* **lucid32-ruby-1.9.3-p194-pg8.4-mongodb**
+  * Same as **lucid32-ruby-1.9.2-p290-pg8.4-mongodb** with Ruby 1.9.3-p194
+* **lucid32-ruby-1.9.3-p194-pg9.1-mongodb**
+	* Same as **lucid32-ruby-1.9.3-p194-pg8.4-mongodb**, with PostgresSQL 9.1 instead of 8.4. Installed using a fork of [corouting chef-postgresql cookbook](https://github.com/coroutine/chef-postgresql), using this [PPA](http://ppa.launchpad.net/pitti/postgresql/ubuntu)
 
 ## Fork!
 
@@ -117,7 +118,8 @@ You're free to fork and submit pull requests if you want to add new configuratio
 
 ## TODO
 
-* Script the whole thing so that once a configuration is chosen, installing Librarian and the cookbooks, selecting the `Vagrantfile` , upping the machine and packaging is done through a single command.
+* Script the whole thing so that once a configuration is chosen, installing Librarian and the cookbooks, selecting the `Vagrantfile`, upping the machine and packaging is done through a single command.
+* Add a recipe and a configuration to build a barebones `lucid32` box with update VirtualBox Guest Additions.
 
 ## Copyright and License
 

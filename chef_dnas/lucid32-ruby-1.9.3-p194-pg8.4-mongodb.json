@@ -1,0 +1,22 @@
+{
+  "run_list": [
+    "recipe[apt]",
+    "recipe[build-essential]",
+    "recipe[git]",
+    "recipe[ruby_stack]",
+    "recipe[postgresql_server_utf8]",
+    "recipe[mongodb]"
+  ],
+  
+  "ruby_stack": {
+    "rubies": "1.9.3-p194",
+    "global": "1.9.3-p194",
+    "users": "vagrant"
+  },
+
+  "postgresql": {
+    "password": {
+      "postgres": "password"
+    }
+  }
+}
