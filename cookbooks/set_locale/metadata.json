@@ -1,0 +1,30 @@
+{
+  "name": "set_locale",
+  "description": "A cookbook to set locales to en_US-UTF8 to enable using UTF8 databases with PostgreSQL server",
+  "long_description": "Updates the locales by setting LANGUAGE, LANG and LC_ALL environment variables, generating locales with locale-gen and running dpkg-reconfigure",
+  "maintainer": "Romain Champourlier",
+  "maintainer_email": "romain@softr.li",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "default": "Default recipe performing the locales setup"
+  },
+  "version": "0.0.2"
+}

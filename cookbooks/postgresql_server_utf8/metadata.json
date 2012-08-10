@@ -1,0 +1,30 @@
+{
+  "name": "postgresql_server_utf8",
+  "description": "A small recipe encapsulatinf postgresl::server recipe with appropriate environment variables for UTF8",
+  "long_description": "A small recipe encapsulatinf postgresl::server recipe with appropriate environment variables for UTF8",
+  "maintainer": "Romain Champourlier",
+  "maintainer_email": "romain@softr.li",
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "default": "default"
+  },
+  "version": "0.0.1"
+}

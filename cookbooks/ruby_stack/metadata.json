@@ -1,0 +1,30 @@
+{
+  "name": "ruby_stack",
+  "description": "Setup a Ruby stack managed with rbenv and Bundler",
+  "long_description": "",
+  "maintainer": "Romain Champourlier, softrli",
+  "maintainer_email": "romain@softr.li",
+  "license": "MIT",
+  "platforms": {
+  },
+  "dependencies": {
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+    "default": ""
+  },
+  "version": "0.0.1"
+}

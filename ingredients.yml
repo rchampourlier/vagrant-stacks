@@ -1,0 +1,47 @@
+cookbooks:
+
+  opscode: 
+    apt: '1.4.4'
+    build-essential: '1.1.0'
+    database: '1.2.0'
+    dmg: '1.0.0'
+    git: '1.0.0'
+    mongodb: '0.11.0'
+    openssl: '1.0.0'
+    runit: '0.15.0'
+    yum: '0.8.0'
+
+  git:
+
+    apt_additions:
+      repo: 'https://github.com/rchampourlier/chef_apt_additions'
+      ref: 'master'
+      force_reload: true
+
+    postgresql_server_utf8:
+      repo: 'https://github.com/rchampourlier/chef_postgresql_server_utf8'
+      ref: 'master'
+      force_reload: true
+      
+    set_locale:
+      repo: 'https://github.com/rchampourlier/chef_set_locale'
+      ref: 'master'
+      force_reload: true
+      
+    ruby_build:
+      repo: 'https://github.com/fnichol/chef-ruby_build'
+      ref: 'v0.6.2'
+
+    rbenv:
+      repo: 'https://github.com/fnichol/chef-rbenv'
+      ref: 'v0.6.8'
+
+    ruby_stack:
+      repo: 'https://github.com/rchampourlier/chef_ruby_stack'
+      ref: 'master'
+      force_reload: true
+
+    postgresql:
+      repo: 'https://github.com/rchampourlier/chef-postgresql'
+      ref: 'master'
+      force_reload: true

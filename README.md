@@ -26,6 +26,11 @@ cd vagrant-stacks
 
 We then need to fetch the cookbooks we will use with [Chef-Solo](http://wiki.opscode.com/display/chef/Chef+Solo). (Chef-Solo is used to provision the box automatically.)
 
+Having some problems with Librarian with the latest set of cookbooks I'm using, I've moved to a custom script that allows me to fetch the cookbooks I need by specifying them inside a YAML file. Plus the cookbooks are now committed with the repository, so you should not need to fetch them.
+
+However, if you want to change them or fetch some other cookbooks, you can edit the `ingredients.yml` file and perform the fetch by running `ruby ingredients.rb`.
+
+_Librarian use, for reference:_
 To manage the cookbooks easily, we use [Librarian](https://github.com/applicationsonline/librarian).
 
 ```
