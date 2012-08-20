@@ -106,7 +106,6 @@ To ensure you have everything in your project repository to rebuild and maintain
 	  * **ruby**: a *ruby 1.9.2-p290* stack managed with *rbenv*, *Bundler* installed globally (default gems management - within rbenv's directory)
 	  * **postgresql**: a PostgreSQL 8.4 package install from default repo (`postgres`' user password is... `password`). Compatible with UTF8 thanks.
 	  * **mongodb**: a MongoDB package install from mongo's repo
-  * This box is available packaged [here]().
 * **lucid32-ruby-1.9.3-p194-pg8.4-mongodb**
   * Same as **lucid32-ruby-1.9.2-p290-pg8.4-mongodb** with Ruby 1.9.3-p194
 * **lucid32-ruby-1.9.3-p194-pg9.1-mongodb**
